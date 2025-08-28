@@ -44,7 +44,7 @@
                         </div>
 
                         <nav class="flex-grow-1">
-                            <h6 class="text-muted text-uppercase small mb-2">Menu</h6>
+
                             <ul class="nav flex-column gap-2 fw-semibold">
                                 <li class="nav-item">
                                     <a href="index.html"
@@ -113,39 +113,34 @@
                 <nav class="mobile-bottom-nav navbar fixed-bottom d-lg-none shadow-lg border-top bg-white">
                     <ul class="nav justify-content-around w-100 text-center fw-semibold">
 
-                        <!-- Home -->
                         <li class="nav-item flex-fill">
-                            <a href="#" class="nav-link active d-flex flex-column align-items-center py-2">
+                            <a href="index.html" class="nav-link active d-flex flex-column align-items-center py-2">
                                 <i class="bi bi-house-door-fill fs-5"></i>
                                 <small>Home</small>
                             </a>
                         </li>
 
-                        <!-- Books -->
                         <li class="nav-item flex-fill">
-                            <a href="#" class="nav-link d-flex flex-column align-items-center py-2">
+                            <a href="Books.html" class="nav-link d-flex flex-column align-items-center py-2">
                                 <i class="bi bi-book fs-5"></i>
                                 <small>Books</small>
                             </a>
                         </li>
 
-                        <!-- Details -->
                         <li class="nav-item flex-fill">
-                            <a href="#" class="nav-link d-flex flex-column align-items-center py-2">
+                            <a href="Book_Details.html" class="nav-link d-flex flex-column align-items-center py-2">
                                 <i class="bi bi-journal-text fs-5"></i>
                                 <small>Details</small>
                             </a>
                         </li>
 
-                        <!-- Contact -->
                         <li class="nav-item flex-fill">
-                            <a href="#" class="nav-link d-flex flex-column align-items-center py-2">
+                            <a href="Contact.html" class="nav-link d-flex flex-column align-items-center py-2">
                                 <i class="bi bi-envelope fs-5"></i>
                                 <small>Contact</small>
                             </a>
                         </li>
 
-                        <!-- Settings -->
                         <li class="nav-item flex-fill">
                             <a href="#" class="nav-link d-flex flex-column align-items-center py-2">
                                 <i class="bi bi-gear fs-5"></i>
@@ -160,317 +155,325 @@
 
                 <div id="main-container" class="main-container rounded w-75 bg-white shadow-sm p-3">
 
-                    <div id="content-area" class="p-3">
-                        <!-- Yaha file ka content load hoga -->
-
-
+                    <div id="content-area" class="p-3 " style="display: none;">
                     </div>
 
 
-                    <nav class="navbar no-border bg-transparent navbar-expand-lg py-2">
-                        <div class="container-fluid">
-                            <a class="navbar-brand fw-bold fs-4">Books Lib<span class="text-warning">.</span></a>
+                    <div id="hideContent">
+                        <nav class="navbar no-border bg-transparent navbar-expand-lg py-2">
+                            <div class="container-fluid">
+                                <a class="navbar-brand fw-bold fs-4">Books Lib<span class="text-warning">.</span></a>
 
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarContent">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarContent">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
 
-                            <div class="collapse navbar-collapse" id="navbarContent">
-                                <form class="d-flex mx-auto my-2 my-lg-0 w-50">
-                                    <div id="rounded" class="search-box border d-flex align-items-center w-100 px-3">
-                                        <input class="form-control no-border bg-transparent" type="search"
-                                            placeholder="Search your books" />
-                                        <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                                <div class="collapse navbar-collapse" id="navbarContent">
+                                    <form class="d-flex mx-auto my-2 my-lg-0 w-50">
+                                        <div id="rounded"
+                                            class="search-box border d-flex align-items-center w-100 px-3">
+                                            <input class="form-control no-border bg-transparent" type="search"
+                                                placeholder="Search your books" />
+                                            <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                                        </div>
+                                    </form>
+
+                                    <ul class="navbar-nav ms-auto align-items-center gap-3">
+                                        <li class="nav-item">
+                                            <a class="nav-link position-relative fw-medium" href="#">
+                                                New Release<sup class="text-warning fs-3 fw-bolder">.</sup>
+                                                <span class="badge-dot"></span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link fw-medium" href="#">Featured</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#"><i
+                                                    class="fa-solid fa-ellipsis-vertical"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+
+                        <div class="container rounded my-5 position-relative">
+                            <h5 class="fw-bold text-dark mb-3">Books you read last</h5>
+
+                            <div class="carousel-nav rounded">
+                                <div class="owl-carousel rounded-4 ">
+                                    <div class="book-card d-flex align-items-center p-3 rounded-4 text-white"
+                                        style="background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);">
+                                        <img src="../public/Images/harry.jpg" class="book-img rounded-3 me-3">
+                                        <div>
+                                            <h6 class="fw-bold mb-1">Harry Potter And The Sorcerer’s Stone</h6>
+                                            <small>193 Page • Chapter 13 • Last Read</small>
+                                        </div>
                                     </div>
-                                </form>
 
-                                <ul class="navbar-nav ms-auto align-items-center gap-3">
-                                    <li class="nav-item">
-                                        <a class="nav-link position-relative fw-medium" href="#">
-                                            New Release<sup class="text-warning fs-3 fw-bolder">.</sup>
-                                            <span class="badge-dot"></span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link fw-medium" href="#">Featured</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
-                                    </li>
-                                </ul>
+                                    <div class="book-card d-flex align-items-center p-3 rounded-4 text-white"
+                                        style="background: linear-gradient(90deg, #000428 0%, #004e92 100%);">
+                                        <img src="../public/Images/tani.webp" class="book-img rounded-3 me-3">
+                                        <div>
+                                            <h6 class="fw-bold mb-1">TA Nehisi Coates The Water Dancer</h6>
+                                            <small>New Purchase • Yet to Read</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="book-card d-flex align-items-center p-3 rounded-4 text-white"
+                                        style="background: linear-gradient(90deg, #232526 0%, #414345 100%);">
+                                        <img src="../public/Images/rob.webp" class="book-img rounded-3 me-3">
+                                        <div>
+                                            <h6 class="fw-bold mb-1">Robert Dreyfus - The Life of Father and Son</h6>
+                                            <small>Recently Added</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="nav-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="nav-btn next"><i class="fa-solid fa-chevron-right"></i></button>
                             </div>
                         </div>
-                    </nav>
 
-                    <div class="container rounded my-5 position-relative">
-                        <h5 class="fw-bold text-dark mb-3">Books you read last</h5>
-
-                        <div class="carousel-nav rounded">
-                            <div class="owl-carousel rounded-4 ">
-                                <div class="book-card d-flex align-items-center p-3 rounded-4 text-white"
-                                    style="background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);">
-                                    <img src="../public/Images/harry.jpg" class="book-img rounded-3 me-3">
-                                    <div>
-                                        <h6 class="fw-bold mb-1">Harry Potter And The Sorcerer’s Stone</h6>
-                                        <small>193 Page • Chapter 13 • Last Read</small>
-                                    </div>
-                                </div>
-
-                                <div class="book-card d-flex align-items-center p-3 rounded-4 text-white"
-                                    style="background: linear-gradient(90deg, #000428 0%, #004e92 100%);">
-                                    <img src="../public/Images/tani.webp" class="book-img rounded-3 me-3">
-                                    <div>
-                                        <h6 class="fw-bold mb-1">TA Nehisi Coates The Water Dancer</h6>
-                                        <small>New Purchase • Yet to Read</small>
-                                    </div>
-                                </div>
-
-                                <div class="book-card d-flex align-items-center p-3 rounded-4 text-white"
-                                    style="background: linear-gradient(90deg, #232526 0%, #414345 100%);">
-                                    <img src="../public/Images/rob.webp" class="book-img rounded-3 me-3">
-                                    <div>
-                                        <h6 class="fw-bold mb-1">Robert Dreyfus - The Life of Father and Son</h6>
-                                        <small>Recently Added</small>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <button class="nav-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
-                            <button class="nav-btn next"><i class="fa-solid fa-chevron-right"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="container my-5">
-                        <div class="row">
-                            <div class="col-lg-9">
-                                <h5 class="fw-bold mb-3">New Release</h5>
-                                <div class="d-flex gap-2 overflow-auto pb-3" style="scrollbar-width:none;">
-                                    <div class="text-center" style="min-width:150px;">
-                                        <img src="https://m.media-amazon.com/images/I/81vpsIs58WL.jpg"
-                                            class="rounded-3 shadow-sm"
-                                            style="width:150px; height:220px; object-fit:cover;">
-                                        <h6 class="mt-2 fw-bold">The Glass Hotel</h6>
-                                        <small class="text-muted">Emily St. John</small>
-                                        <div><span class="badge bg-light text-dark mt-1">Mystery</span></div>
-                                    </div>
-
-                                    <div class="text-center" style="min-width:150px;">
-                                        <img src="https://m.media-amazon.com/images/I/71m-MxdJ2WL.jpg"
-                                            class="rounded-3 shadow-sm"
-                                            style="width:150px; height:220px; object-fit:cover;">
-                                        <h6 class="mt-2 fw-bold">The Book of Longings</h6>
-                                        <small class="text-muted">Sue Monk</small>
-                                        <div><span class="badge bg-light text-dark mt-1">Fiction</span></div>
-                                    </div>
-
-                                    <div class="text-center" style="min-width:150px;">
-                                        <img src="https://m.media-amazon.com/images/I/81wGF+e1rBL.jpg"
-                                            class="rounded-3 shadow-sm"
-                                            style="width:150px; height:220px; object-fit:cover;">
-                                        <h6 class="mt-2 fw-bold">Darling Rose Gold</h6>
-                                        <small class="text-muted">Stephanie Wrobel</small>
-                                        <div><span class="badge bg-light text-dark mt-1">Thriller</span></div>
-                                    </div>
-
-                                    <div class="text-center" style="min-width:150px;">
-                                        <img src="https://m.media-amazon.com/images/I/81vpsIs58WL.jpg"
-                                            class="rounded-3 shadow-sm"
-                                            style="width:150px; height:220px; object-fit:cover;">
-                                        <h6 class="mt-2 fw-bold">The Glass Hotel</h6>
-                                        <small class="text-muted">Emily St. John</small>
-                                        <div><span class="badge bg-light text-dark mt-1">Mystery</span></div>
-                                    </div>
-
-                                    <div class="text-center" style="min-width:150px;">
-                                        <img src="https://m.media-amazon.com/images/I/71m-MxdJ2WL.jpg"
-                                            class="rounded-3 shadow-sm"
-                                            style="width:150px; height:220px; object-fit:cover;">
-                                        <h6 class="mt-2 fw-bold">The Book of Longings</h6>
-                                        <small class="text-muted">Sue Monk</small>
-                                        <div><span class="badge bg-light text-dark mt-1">Fiction</span></div>
-                                    </div>
-
-                                    <div class="text-center" style="min-width:150px;">
-                                        <img src="https://m.media-amazon.com/images/I/81wGF+e1rBL.jpg"
-                                            class="rounded-3 shadow-sm"
-                                            style="width:150px; height:220px; object-fit:cover;">
-                                        <h6 class="mt-2 fw-bold">Darling Rose Gold</h6>
-                                        <small class="text-muted">Stephanie Wrobel</small>
-                                        <div><span class="badge bg-light text-dark mt-1">Thriller</span></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id="autherBg" class="col-lg-3 ">
-                                <h5 class="fw-bold mb-3">Famous Authors</h5>
-                                <div class="d-flex flex-column gap-3">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/J._K._Rowling_2010.jpg"
-                                            class="rounded-circle" style="width:45px; height:45px; object-fit:cover;">
-                                        <div>
-                                            <h6 class="mb-0 fw-bold">J.K Rowling</h6>
-                                            <small class="text-muted">10 Books</small>
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <h5 class="fw-bold mb-3">New Release</h5>
+                                    <div class="d-flex gap-2 overflow-auto pb-3" style="scrollbar-width:none;">
+                                        <div class="text-center" style="min-width:150px;">
+                                            <img src="https://m.media-amazon.com/images/I/81vpsIs58WL.jpg"
+                                                class="rounded-3 shadow-sm"
+                                                style="width:150px; height:220px; object-fit:cover;">
+                                            <h6 class="mt-2 fw-bold">The Glass Hotel</h6>
+                                            <small class="text-muted">Emily St. John</small>
+                                            <div><span class="badge bg-light text-dark mt-1">Mystery</span></div>
                                         </div>
-                                    </div>
 
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Stephen_King%2C_Comicon.jpg"
-                                            class="rounded-circle" style="width:45px; height:45px; object-fit:cover;">
-                                        <div>
-                                            <h6 class="mb-0 fw-bold">Stephen King</h6>
-                                            <small class="text-muted">61 Novels</small>
+                                        <div class="text-center" style="min-width:150px;">
+                                            <img src="https://m.media-amazon.com/images/I/71m-MxdJ2WL.jpg"
+                                                class="rounded-3 shadow-sm"
+                                                style="width:150px; height:220px; object-fit:cover;">
+                                            <h6 class="mt-2 fw-bold">The Book of Longings</h6>
+                                            <small class="text-muted">Sue Monk</small>
+                                            <div><span class="badge bg-light text-dark mt-1">Fiction</span></div>
                                         </div>
-                                    </div>
 
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/J._K._Rowling_2010.jpg"
-                                            class="rounded-circle" style="width:45px; height:45px; object-fit:cover;">
-                                        <div>
-                                            <h6 class="mb-0 fw-bold">J.K Rowling</h6>
-                                            <small class="text-muted">10 Books</small>
+                                        <div class="text-center" style="min-width:150px;">
+                                            <img src="https://m.media-amazon.com/images/I/81wGF+e1rBL.jpg"
+                                                class="rounded-3 shadow-sm"
+                                                style="width:150px; height:220px; object-fit:cover;">
+                                            <h6 class="mt-2 fw-bold">Darling Rose Gold</h6>
+                                            <small class="text-muted">Stephanie Wrobel</small>
+                                            <div><span class="badge bg-light text-dark mt-1">Thriller</span></div>
                                         </div>
-                                    </div>
 
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Stephen_King%2C_Comicon.jpg"
-                                            class="rounded-circle" style="width:45px; height:45px; object-fit:cover;">
-                                        <div>
-                                            <h6 class="mb-0 fw-bold">Stephen King</h6>
-                                            <small class="text-muted">61 Novels</small>
+                                        <div class="text-center" style="min-width:150px;">
+                                            <img src="https://m.media-amazon.com/images/I/81vpsIs58WL.jpg"
+                                                class="rounded-3 shadow-sm"
+                                                style="width:150px; height:220px; object-fit:cover;">
+                                            <h6 class="mt-2 fw-bold">The Glass Hotel</h6>
+                                            <small class="text-muted">Emily St. John</small>
+                                            <div><span class="badge bg-light text-dark mt-1">Mystery</span></div>
                                         </div>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <img src="../public/Images/sr.png" class="rounded-circle"
-                                            style="width:45px; height:45px; object-fit:cover;">
-                                        <div>
-                                            <h6 class="mb-0 fw-bold">Suraj Rajput</h6>
-                                            <small class="text-muted">61 Novels</small>
+
+                                        <div class="text-center" style="min-width:150px;">
+                                            <img src="https://m.media-amazon.com/images/I/71m-MxdJ2WL.jpg"
+                                                class="rounded-3 shadow-sm"
+                                                style="width:150px; height:220px; object-fit:cover;">
+                                            <h6 class="mt-2 fw-bold">The Book of Longings</h6>
+                                            <small class="text-muted">Sue Monk</small>
+                                            <div><span class="badge bg-light text-dark mt-1">Fiction</span></div>
+                                        </div>
+
+                                        <div class="text-center" style="min-width:150px;">
+                                            <img src="https://m.media-amazon.com/images/I/81wGF+e1rBL.jpg"
+                                                class="rounded-3 shadow-sm"
+                                                style="width:150px; height:220px; object-fit:cover;">
+                                            <h6 class="mt-2 fw-bold">Darling Rose Gold</h6>
+                                            <small class="text-muted">Stephanie Wrobel</small>
+                                            <div><span class="badge bg-light text-dark mt-1">Thriller</span></div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="swiper container mySwiper">
-                        <h5 class="fw-bold mb-3">Books Collections</h5>
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="https://covers.openlibrary.org/b/id/10523362-L.jpg" alt="Harry Potter" />
-                                <div class="book-info">
-                                    <h5>Harry Potter and the Sorcerer’s Stone</h5>
-                                    <p>J.K. Rowling</p>
-                                </div>
-                            </div>
+                                <div id="autherBg" class="col-lg-3 ">
+                                    <h5 class="fw-bold mb-3">Famous Authors</h5>
+                                    <div class="d-flex flex-column gap-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/J._K._Rowling_2010.jpg"
+                                                class="rounded-circle"
+                                                style="width:45px; height:45px; object-fit:cover;">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">J.K Rowling</h6>
+                                                <small class="text-muted">10 Books</small>
+                                            </div>
+                                        </div>
 
-                            <div class="swiper-slide">
-                                <img src="https://covers.openlibrary.org/b/id/11153234-L.jpg" alt="The Water Dancer" />
-                                <div class="book-info">
-                                    <h5>The Water Dancer</h5>
-                                    <p>Ta-Nehisi Coates</p>
-                                </div>
-                            </div>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Stephen_King%2C_Comicon.jpg"
+                                                class="rounded-circle"
+                                                style="width:45px; height:45px; object-fit:cover;">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">Stephen King</h6>
+                                                <small class="text-muted">61 Novels</small>
+                                            </div>
+                                        </div>
 
-                            <div class="swiper-slide">
-                                <img src="https://covers.openlibrary.org/b/id/12829232-L.jpg"
-                                    alt="The Midnight Library" />
-                                <div class="book-info">
-                                    <h5>The Midnight Library</h5>
-                                    <p>Matt Haig</p>
-                                </div>
-                            </div>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/J._K._Rowling_2010.jpg"
+                                                class="rounded-circle"
+                                                style="width:45px; height:45px; object-fit:cover;">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">J.K Rowling</h6>
+                                                <small class="text-muted">10 Books</small>
+                                            </div>
+                                        </div>
 
-                            <div class="swiper-slide">
-                                <img src="https://covers.openlibrary.org/b/id/9872476-L.jpg" alt="The Alchemist" />
-                                <div class="book-info">
-                                    <h5>The Alchemist</h5>
-                                    <p>Paulo Coelho</p>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="https://covers.openlibrary.org/b/id/10523362-L.jpg" alt="Harry Potter" />
-                                <div class="book-info">
-                                    <h5>Harry Potter and the Sorcerer’s Stone</h5>
-                                    <p>J.K. Rowling</p>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="https://covers.openlibrary.org/b/id/11153234-L.jpg" alt="The Water Dancer" />
-                                <div class="book-info">
-                                    <h5>The Water Dancer</h5>
-                                    <p>Ta-Nehisi Coates</p>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="https://covers.openlibrary.org/b/id/12829232-L.jpg"
-                                    alt="The Midnight Library" />
-                                <div class="book-info">
-                                    <h5>The Midnight Library</h5>
-                                    <p>Matt Haig</p>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="https://covers.openlibrary.org/b/id/9872476-L.jpg" alt="The Alchemist" />
-                                <div class="book-info">
-                                    <h5>The Alchemist</h5>
-                                    <p>Paulo Coelho</p>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Stephen_King%2C_Comicon.jpg"
+                                                class="rounded-circle"
+                                                style="width:45px; height:45px; object-fit:cover;">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">Stephen King</h6>
+                                                <small class="text-muted">61 Novels</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="../public/Images/sr.png" class="rounded-circle"
+                                                style="width:45px; height:45px; object-fit:cover;">
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">Suraj Rajput</h6>
+                                                <small class="text-muted">61 Novels</small>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                    <div class="container text-center py-5">
-                        <h2 class="mb-4">Most expensive sales from April to June 2025</h2>
-                        <p class="mb-5">
-                            From Renaissance philosophy to twentieth-century masterpieces: five centuries of literary
-                            achievement.
-                        </p>
+                        <div class="swiper container mySwiper">
+                            <h5 class="fw-bold mb-3">Books Collections</h5>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://covers.openlibrary.org/b/id/10523362-L.jpg" alt="Harry Potter" />
+                                    <div class="book-info">
+                                        <h5>Harry Potter and the Sorcerer’s Stone</h5>
+                                        <p>J.K. Rowling</p>
+                                    </div>
+                                </div>
 
-                        <div class="d-flex justify-content-center flex-wrap">
+                                <div class="swiper-slide">
+                                    <img src="https://covers.openlibrary.org/b/id/11153234-L.jpg"
+                                        alt="The Water Dancer" />
+                                    <div class="book-info">
+                                        <h5>The Water Dancer</h5>
+                                        <p>Ta-Nehisi Coates</p>
+                                    </div>
+                                </div>
 
-                            <div class="profile-wrapper m-3 text-center">
-                                <img src="https://covers.openlibrary.org/b/id/8231856-L.jpg" alt="Book"
-                                    class="profile-img rounded-circle shadow">
-                                <h6 class="mt-2">The White Tiger <br><small>(Aravind Adiga)</small></h6>
-                                <div class="payment-badge">+28 000 руб.</div>
-                                <div class="plus-icon">+</div>
+                                <div class="swiper-slide">
+                                    <img src="https://covers.openlibrary.org/b/id/12829232-L.jpg"
+                                        alt="The Midnight Library" />
+                                    <div class="book-info">
+                                        <h5>The Midnight Library</h5>
+                                        <p>Matt Haig</p>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="https://covers.openlibrary.org/b/id/9872476-L.jpg" alt="The Alchemist" />
+                                    <div class="book-info">
+                                        <h5>The Alchemist</h5>
+                                        <p>Paulo Coelho</p>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="https://covers.openlibrary.org/b/id/10523362-L.jpg" alt="Harry Potter" />
+                                    <div class="book-info">
+                                        <h5>Harry Potter and the Sorcerer’s Stone</h5>
+                                        <p>J.K. Rowling</p>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="https://covers.openlibrary.org/b/id/11153234-L.jpg"
+                                        alt="The Water Dancer" />
+                                    <div class="book-info">
+                                        <h5>The Water Dancer</h5>
+                                        <p>Ta-Nehisi Coates</p>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="https://covers.openlibrary.org/b/id/12829232-L.jpg"
+                                        alt="The Midnight Library" />
+                                    <div class="book-info">
+                                        <h5>The Midnight Library</h5>
+                                        <p>Matt Haig</p>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="https://covers.openlibrary.org/b/id/9872476-L.jpg" alt="The Alchemist" />
+                                    <div class="book-info">
+                                        <h5>The Alchemist</h5>
+                                        <p>Paulo Coelho</p>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="profile-wrapper m-3 text-center">
-                                <img src="https://covers.openlibrary.org/b/id/10525177-L.jpg" alt="Book"
-                                    class="profile-img rounded-circle shadow">
-                                <h6 class="mt-2">Midnight's Children <br><small>(Salman Rushdie)</small></h6>
-                                <div class="payment-badge">+19 000 руб.</div>
-                                <div class="plus-icon">+</div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <div class="container text-center py-5">
+                            <h2 class="mb-4">Most expensive sales from April to June 2025</h2>
+                            <p class="mb-5">
+                                From Renaissance philosophy to twentieth-century masterpieces: five centuries of
+                                literary
+                                achievement.
+                            </p>
+
+                            <div class="d-flex justify-content-center flex-wrap">
+
+                                <div class="profile-wrapper m-3 text-center">
+                                    <img src="https://covers.openlibrary.org/b/id/8231856-L.jpg" alt="Book"
+                                        class="profile-img rounded-circle shadow">
+                                    <h6 class="mt-2">The White Tiger <br><small>(Aravind Adiga)</small></h6>
+                                    <div class="payment-badge">+28 000 руб.</div>
+                                    <div class="plus-icon">+</div>
+                                </div>
+
+                                <div class="profile-wrapper m-3 text-center">
+                                    <img src="https://covers.openlibrary.org/b/id/10525177-L.jpg" alt="Book"
+                                        class="profile-img rounded-circle shadow">
+                                    <h6 class="mt-2">Midnight's Children <br><small>(Salman Rushdie)</small></h6>
+                                    <div class="payment-badge">+19 000 руб.</div>
+                                    <div class="plus-icon">+</div>
+                                </div>
+
+                                <div class="profile-wrapper m-3 text-center">
+                                    <img src="https://covers.openlibrary.org/b/id/10909328-L.jpg" alt="Book"
+                                        class="profile-img rounded-circle shadow">
+                                    <h6 class="mt-2">Train to Pakistan <br><small>(Khushwant Singh)</small></h6>
+                                    <div class="payment-badge">+25 000 руб.</div>
+                                    <div class="plus-icon">+</div>
+                                </div>
+
+                                <div class="profile-wrapper m-3 text-center">
+                                    <img src="https://covers.openlibrary.org/b/id/11953864-L.jpg" alt="Book"
+                                        class="profile-img rounded-circle shadow">
+                                    <h6 class="mt-2">God of Small Things <br><small>(Arundhati Roy)</small></h6>
+                                    <div class="plus-icon">+</div>
+                                </div>
                             </div>
 
-                            <div class="profile-wrapper m-3 text-center">
-                                <img src="https://covers.openlibrary.org/b/id/10909328-L.jpg" alt="Book"
-                                    class="profile-img rounded-circle shadow">
-                                <h6 class="mt-2">Train to Pakistan <br><small>(Khushwant Singh)</small></h6>
-                                <div class="payment-badge">+25 000 руб.</div>
-                                <div class="plus-icon">+</div>
-                            </div>
-
-                            <div class="profile-wrapper m-3 text-center">
-                                <img src="https://covers.openlibrary.org/b/id/11953864-L.jpg" alt="Book"
-                                    class="profile-img rounded-circle shadow">
-                                <h6 class="mt-2">God of Small Things <br><small>(Arundhati Roy)</small></h6>
-                                <div class="plus-icon">+</div>
-                            </div>
+                            <button class="btn btn-success btn-lg mt-4">See The list</button>
                         </div>
 
-                        <button class="btn btn-success btn-lg mt-4">See The list</button>
                     </div>
-
 
 
 
