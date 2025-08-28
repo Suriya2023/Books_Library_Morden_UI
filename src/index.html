@@ -14,6 +14,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="../public/StyleSheet/style.css">
     <script src="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../public/JavaScript/index.js"></script>
 
 
     <title>LibraryManagementSystem</title>
@@ -28,7 +29,6 @@
                     <div class="d-flex flex-column justify-content-between p-3"
                         style="width:23vw; min-height:100vh; background:#f9fafb; border-right:1px solid #e5e7eb;">
 
-                        <!-- Profile Section -->
                         <div id="NewUserCard" class="text-center mb-4">
                             <img src="../public/Images/sr.png" class="rounded-circle border shadow-sm mb-2"
                                 style="width:70px; height:70px; object-fit:cover;">
@@ -36,65 +36,60 @@
                             <b class="text-primary">Suraj Rajput</b>
                             <p class="small text-muted mt-1">Frontend Developer</p>
 
-                            <!-- Quick Actions -->
                             <div class="d-flex justify-content-center gap-2 mt-2">
                                 <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-3">Edit</a>
                                 <a href="#" class="btn btn-sm btn-primary rounded-pill px-3">Upgrade</a>
                             </div>
                         </div>
 
-                        <!-- Navigation Links -->
                         <nav class="flex-grow-1">
                             <h6 class="text-muted text-uppercase small mb-2">Menu</h6>
                             <ul class="nav flex-column gap-2 fw-semibold">
                                 <li class="nav-item">
-                                    <a href="#"
-                                        class="nav-link active rounded px-3 py-2 d-flex align-items-center gap-2">
+                                    <a href="index.html"
+                                        class="nav-link  active rounded px-3 py-2 d-flex align-items-center gap-2">
                                         <i class="bi bi-house-door"></i> Home
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#"
-                                        class="nav-link text-dark rounded px-3 py-2 d-flex align-items-center gap-2">
+                                    <a href="about.html"
+                                        class="nav-link load-page text-dark rounded px-3 py-2 d-flex align-items-center gap-2">
                                         <i class="bi bi-info-circle"></i> About
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#"
-                                        class="nav-link text-dark rounded px-3 py-2 d-flex align-items-center gap-2">
+                                    <a href="Books.html"
+                                        class="nav-link load-page text-dark rounded px-3 py-2 d-flex align-items-center gap-2">
                                         <i class="bi bi-book"></i> Books
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#"
-                                        class="nav-link text-dark rounded px-3 py-2 d-flex align-items-center gap-2">
+                                    <a href="Book_Details.html"
+                                        class="nav-link load-page text-dark rounded px-3 py-2 d-flex align-items-center gap-2">
                                         <i class="bi bi-journal-text"></i> Book Details
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#"
-                                        class="nav-link text-dark rounded px-3 py-2 d-flex align-items-center gap-2">
+                                    <a href="Contact.html"
+                                        class="nav-link load-page text-dark rounded px-3 py-2 d-flex align-items-center gap-2">
                                         <i class="bi bi-envelope"></i> Contact
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#"
-                                        class="nav-link text-dark rounded px-3 py-2 d-flex align-items-center gap-2">
+                                    <a href="Analytics.html"
+                                        class="nav-link load-page text-dark rounded px-3 py-2 d-flex align-items-center gap-2">
                                         <i class="bi bi-bar-chart"></i> Analytics
                                     </a>
                                 </li>
                             </ul>
                         </nav>
 
-                        <!-- Extra Widgets -->
                         <div class="border-top pt-3">
-                            <!-- Progress (Reading Goals) -->
                             <h6 class="text-muted text-uppercase small mb-2">Reading Progress</h6>
                             <div class="progress mb-3" style="height:6px;">
                                 <div class="progress-bar bg-primary" role="progressbar" style="width: 45%;"></div>
                             </div>
 
-                            <!-- User Info -->
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <img src="../public/Images/sr.png" class="rounded-circle border"
                                     style="width:40px; height:40px; object-fit:cover;">
@@ -104,7 +99,6 @@
                                 </div>
                             </div>
 
-                            <!-- Settings -->
                             <a href="#" class="nav-link text-dark d-flex align-items-center gap-2 px-2 py-1">
                                 <i class="bi bi-gear"></i> Settings
                             </a>
@@ -164,6 +158,14 @@
 
 
                 <div id="main-container" class="main-container rounded w-75 bg-white shadow-sm p-3">
+                   
+                    <div id="content-area" class="p-3">
+                        <!-- Yaha file ka content load hoga -->
+                   
+                   
+                    </div>
+
+
                     <nav class="navbar no-border bg-transparent navbar-expand-lg py-2">
                         <div class="container-fluid">
                             <a class="navbar-brand fw-bold fs-4">Books Lib<span class="text-warning">.</span></a>
@@ -433,7 +435,6 @@
 
                         <div class="d-flex justify-content-center flex-wrap">
 
-                            <!-- Profile 1 -->
                             <div class="profile-wrapper m-3 text-center">
                                 <img src="https://covers.openlibrary.org/b/id/8231856-L.jpg" alt="Book"
                                     class="profile-img rounded-circle shadow">
@@ -442,7 +443,6 @@
                                 <div class="plus-icon">+</div>
                             </div>
 
-                            <!-- Profile 2 -->
                             <div class="profile-wrapper m-3 text-center">
                                 <img src="https://covers.openlibrary.org/b/id/10525177-L.jpg" alt="Book"
                                     class="profile-img rounded-circle shadow">
@@ -451,7 +451,6 @@
                                 <div class="plus-icon">+</div>
                             </div>
 
-                            <!-- Profile 3 -->
                             <div class="profile-wrapper m-3 text-center">
                                 <img src="https://covers.openlibrary.org/b/id/10909328-L.jpg" alt="Book"
                                     class="profile-img rounded-circle shadow">
@@ -460,7 +459,6 @@
                                 <div class="plus-icon">+</div>
                             </div>
 
-                            <!-- Profile 4 -->
                             <div class="profile-wrapper m-3 text-center">
                                 <img src="https://covers.openlibrary.org/b/id/11953864-L.jpg" alt="Book"
                                     class="profile-img rounded-circle shadow">
@@ -471,6 +469,11 @@
 
                         <button class="btn btn-success btn-lg mt-4">See The list</button>
                     </div>
+
+
+
+
+
                 </div>
             </div>
         </div>
@@ -480,53 +483,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            var owl = $(".owl-carousel");
-            owl.owlCarousel({
-                loop: true,
-                margin: 15,
-                nav: false,
-                dots: true,
-                responsive: {
-                    0: { items: 1.2 },
-                    576: { items: 2 },
-                    768: { items: 2.5 },
-                    992: { items: 3 }
-                }
-            });
-
-            $(".next").click(function () {
-                owl.trigger("next.owl.carousel");
-            });
-            $(".prev").click(function () {
-                owl.trigger("prev.owl.carousel");
-            });
-        });
-
-        var swiper = new Swiper(".mySwiper", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            coverflowEffect: {
-                rotate: 20,
-                stretch: 0,
-                depth: 200,
-                modifier: 1,
-                slideShadows: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-
-    </script>
 
 
 </body>
