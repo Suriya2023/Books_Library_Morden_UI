@@ -54,7 +54,7 @@ Designed to make reading, exploring, and managing books **visually engaging and 
 
 Clone the repo & open `index.html`  
 
-```bash
+bash
 git clone https://github.com/your-username/LibraryManagementSystem.git
 cd LibraryManagementSystem
 
@@ -70,7 +70,7 @@ start index.html  # Windows
 ✨ Attractive showcase of the UI:
 
 🏠 Dashboard
-<img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_New_Ui-/main/public/Images/ss.png" width="700"/>
+<img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_New_Ui-/main/public/Images/ss.png" width="700"/> <br/>
 📚 Book Collection
 <img src="./public/Images/screenshot-books.png" width="700"/>
 🔮 Upcoming Features
