@@ -16,7 +16,8 @@
     <script src="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
     <script src="../public/JavaScript/index.js"></script>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <title>LibraryManagementSystem</title>
 </head>
 
@@ -158,11 +159,11 @@
 
 
                 <div id="main-container" class="main-container rounded w-75 bg-white shadow-sm p-3">
-                   
+
                     <div id="content-area" class="p-3">
                         <!-- Yaha file ka content load hoga -->
-                   
-                   
+
+
                     </div>
 
 
@@ -480,8 +481,54 @@
     </header>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+
+
+        $(document).ready(function () {
+            var owl = $(".owl-carousel");
+            owl.owlCarousel({
+                loop: true,
+                margin: 15,
+                nav: false,
+                dots: true,
+                responsive: {
+                    0: { items: 1.2 },
+                    576: { items: 2 },
+                    768: { items: 2.5 },
+                    992: { items: 3 }
+                }
+            });
+
+            $(".next").click(function () {
+                owl.trigger("next.owl.carousel");
+            });
+            $(".prev").click(function () {
+                owl.trigger("prev.owl.carousel");
+            });
+        });
+
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 
 
 

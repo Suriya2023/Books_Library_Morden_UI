@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     links.forEach(link => {
         link.addEventListener("click", function (e) {
-            e.preventDefault(); 
+            e.preventDefault(); // Page reload roko
             const url = this.getAttribute("href");
 
             fetch(url)
