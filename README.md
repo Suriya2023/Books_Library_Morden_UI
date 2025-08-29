@@ -70,7 +70,7 @@ start index.html  # Windows
 ✨ Attractive showcase of the UI:
 
 🏠 Dashboard
-<img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_New_Ui-/main/public/Images/ss.png" width="700"/> <br/>
+<img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_Morden_UI/main/public/Images/ss.png" width="700"/> <br/>
 📚 Book Collection
 <img src="./public/Images/screenshot-books.png" width="700"/>
 🔮 Upcoming Features
@@ -101,3 +101,5 @@ Suraj Rajput – Full Stack (MERN) Developer
 - This will make your README **stand out on GitHub** ✨  
 
 Do you want me to also **design a custom banner** (wide GitHub-style header with your project
+
+
