@@ -33,20 +33,19 @@ Designed to make reading, exploring, and managing books **visually engaging and 
 
 
 
-📦 LibraryManagementSystem
-┣ 📂 public
-┃ ┣ 📂 Images # All images used in UI
-┃ ┣ 📂 JavaScript # index.js (custom scripts)
-┃ ┗ 📂 StyleSheet # style.css (custom styles)
-┣ 📂 bootstrap-5.3.8-dist
-┣ 📜 index.html # Main Dashboard
-┣ 📜 about.html # About page
-┣ 📜 Books.html # Books section
-┣ 📜 Book_Details.html # Book details
-┣ 📜 Contact.html # Contact page
-┣ 📜 Analytics.html # Analytics Dashboard
-┗ 📜 README.md # Documentation
-
+📦 LibraryManagementSystem <br/>
+┣ 📂 public <br/>
+┃ ┣ 📂 Images # All images used in UI <br/>
+┃ ┣ 📂 JavaScript # index.js (custom scripts) <br/>
+┃ ┗ 📂 StyleSheet # style.css (custom styles)<br/>
+┣ 📂 bootstrap-5.3.8-dist <br/>
+┣ 📜 index.html # Main Dashboard  <br/>
+┣ 📜 about.html # About page <br/>
+┣ 📜 Books.html # Books section  <br/>
+┣ 📜 Book_Details.html # Book details <br/>
+┣ 📜 Contact.html # Contact page <br/>
+┣ 📜 Analytics.html # Analytics Dashboard <br/>
+┗ 📜 README.md # Documentation <br/>
 
 ---
 
@@ -94,12 +93,4 @@ Suraj Rajput – Full Stack (MERN) Developer
 🔥 A project that blends simplicity, responsiveness & interactivity to make reading management fun!
 
 
----
-
-👉 Suggestion:  
-- Replace `screenshot-home.png` and `screenshot-books.png` with the **generated UI images** you just created (`public/Images/`).  
-- This will make your README **stand out on GitHub** ✨  
-
-Do you want me to also **design a custom banner** (wide GitHub-style header with your project
-
-
+ 
