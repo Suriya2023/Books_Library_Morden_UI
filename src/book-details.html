@@ -47,13 +47,13 @@
 
                     <ul class="navbar-nav ms-auto align-items-center gap-3">
                         <li class="nav-item">
-                            <a class="nav-link position-relative fw-medium" href="#">
+                            <a class="nav-link position-relative fw-medium" href="../src/book-details.html?id=4">
                                 New Release<sup class="text-warning fs-3 fw-bolder">.</sup>
                                 <span class="badge-dot"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-medium" href="#">Featured</a>
+                            <a class="nav-link fw-medium" href="../public/index.html#bob">Featured</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
@@ -62,6 +62,16 @@
                 </div>
             </div>
         </nav>
+
+
+
+        <main class="container py-5">
+            <div class="row g-4" id="details"></div>
+        </main>
+
+        <main class="container py-5">
+            <div class="row g-4" id="booksRow"></div>
+        </main>
 
         <main class="container  py-5">
             <div class="row g-5 align-items-start">
@@ -79,20 +89,10 @@
                         <li>Chapter 9</li>
                         <li>Last Read</li>
                     </ul>
-                    <a href="books.html" class="btn btn-outline-secondary mt-3">Back to Books</a>
+                    <a href="../src/book-details.html?id=4" class="btn btn-success mt-3">Read Detail....</a>
                 </div>
             </div>
         </main>
-
-
-        <main class="container py-5">
-            <div class="row g-4" id="details"></div>
-        </main>
-
-        <main class="container py-5">
-            <div class="row g-4" id="booksRow"></div>
-        </main>
-
 
 
         <footer class="bg-dark text-white text-center py-3">
@@ -135,7 +135,7 @@
                 <p><strong>Author:</strong> ${author}</p>
                 <p><strong>Type:</strong> ${type}</p>
                 <p><strong>Book Info:</strong> ${details}</p>
-                <a href="books.html" class="btn btn-outline-secondary mt-3">Back to Books</a>
+                <a href="books.html" class="btn btn-success mt-3">Back to Books</a>
               </div>`;
                             $("#details").html(html);
                         }
@@ -172,7 +172,7 @@
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title">${title}</h5>
                   <p class="text-muted small">${details}</p>
-                  <a href="book-details.html?id=${id}" class="btn btn-primary mt-auto">View Details</a>
+                  <a href="book-details.html?id=${id}" class="btn btn-success mt-auto">View Details</a>
                 </div>
               </div>
             </div>`;

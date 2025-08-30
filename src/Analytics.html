@@ -4,14 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/StyleSheet/style.css">
+    <style>
+        .card-stat {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card-stat h4 {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .card-stat p {
+            margin: 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .card-stat {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card-stat h4 {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .card-stat p {
+            margin: 0;
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
     <title>Analytics</title>
 </head>
 
 <body>
-
-    <div class="conatainer">
+    <div class="container">
         <nav class="navbar no-border bg-transparent navbar-expand-lg py-2">
             <div class="container-fluid">
                 <a href="../public/index.html" class="navbar-brand fw-bold fs-4">Books Lib<span
@@ -32,13 +70,13 @@
 
                     <ul class="navbar-nav ms-auto align-items-center gap-3">
                         <li class="nav-item">
-                            <a class="nav-link position-relative fw-medium" href="#">
+                            <a class="nav-link position-relative fw-medium" href="../src/book-details.html?id=4">
                                 New Release<sup class="text-warning fs-3 fw-bolder">.</sup>
                                 <span class="badge-dot"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-medium" href="#">Featured</a>
+                            <a class="nav-link fw-medium" href="../public/index.html#bob">Featured</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
@@ -47,8 +85,178 @@
                 </div>
             </div>
         </nav>
+
+
+
+
+        <div class="container py-5">
+            <h2 class="mb-4">Library Analytics
+                <sup class="bg-sucssec" onclick="window.location.href = '../src/Analytics.html'">
+                    <button>Click More</button>
+                </sup>
+            </h2>
+
+
+            <div class="row mb-4 g-4" id="topStats">
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card p-3 shadow-sm">
+                        <h5 class="mb-3">Books by Category</h5>
+                        <canvas id="categoryChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-3 shadow-sm">
+                        <h5 class="mb-3">Books Added Over Months</h5>
+                        <canvas id="monthlyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4 g-4">
+                <div class="col-md-3">
+                    <div class="card card-stat bg-light">
+                        <h4>120</h4>
+                        <p>Total Books</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card card-stat bg-light">
+                        <h4>Ancient Journey of Library</h4>
+                        <p>Most Viewed Book</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card card-stat bg-light">
+                        <h4>10</h4>
+                        <p>Books Added This Month</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card card-stat bg-light">
+                        <h4>45</h4>
+                        <p>Fiction Books</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card p-3 shadow-sm">
+                        <h5 class="mb-3">Books by Category</h5>
+                        <canvas id="categoryChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-3 shadow-sm">
+                        <h5 class="mb-3">Books Added Over Months</h5>
+                        <canvas id="monthlyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer class="bg-dark text-white text-center py-3">
+            <p class="mb-0">© 2025 My Library</p>
+        </footer>
     </div>
 
+
+
+    <script src="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "../src/data.xml",
+                dataType: "xml",
+                success: function (xml) {
+                    let totalBooks = 0;
+                    let mostViewedBook = "";
+                    let booksAddedThisMonth = 0;
+                    let categoryCount = {};
+                    let monthCount = {};
+
+                    const currentMonth = new Date().getMonth() + 1;
+
+                    $(xml).find("book").each(function () {
+                        totalBooks++;
+
+                        // Count by category/type
+                        const type = $(this).find("type").text();
+                        categoryCount[type] = (categoryCount[type] || 0) + 1;
+
+                        const title = $(this).find("title").text();
+                        const details = $(this).find("details").text();
+                        if (details.includes("Last Read")) {
+                            mostViewedBook = title;
+                        }
+
+                        const month = parseInt($(this).find("month").text()) || currentMonth;
+                        if (month === currentMonth) booksAddedThisMonth++;
+
+                        monthCount[month] = (monthCount[month] || 0) + 1;
+                    });
+
+                    $("#topStats").html(`
+        <div class="col-md-3">
+          <div class="card card-stat bg-light"><h4>${totalBooks}</h4><p>Total Books</p></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card card-stat bg-light"><h4>${mostViewedBook}</h4><p>Most Viewed Book</p></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card card-stat bg-light"><h4>${booksAddedThisMonth}</h4><p>Books Added This Month</p></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card card-stat bg-light"><h4>${categoryCount['Fiction'] || 0}</h4><p>Fiction Books</p></div>
+        </div>
+      `);
+
+                    const ctxCategory = document.getElementById('categoryChart').getContext('2d');
+                    new Chart(ctxCategory, {
+                        type: 'pie',
+                        data: {
+                            labels: Object.keys(categoryCount),
+                            datasets: [{
+                                data: Object.values(categoryCount),
+                                backgroundColor: ['#007bff', '#28a745', '#ffc107', '#dc3545', '#6f42c1']
+                            }]
+                        },
+                        options: { responsive: true }
+                    });
+
+                    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                    const monthlyData = Array(12).fill(0);
+                    Object.keys(monthCount).forEach(m => { monthlyData[m - 1] = monthCount[m]; });
+
+                    const ctxMonthly = document.getElementById('monthlyChart').getContext('2d');
+                    new Chart(ctxMonthly, {
+                        type: 'bar',
+                        data: {
+                            labels: months,
+                            datasets: [{
+                                label: 'Books Added',
+                                data: monthlyData,
+                                backgroundColor: '#17a2b8'
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            scales: { y: { beginAtZero: true } }
+                        }
+                    });
+
+                },
+                error: function () {
+                    alert("Failed to load analytics data from XML.");
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
