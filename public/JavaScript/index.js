@@ -22,17 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-window.onload = function () {
-    if (localStorage.getItem('hideButton') === 'true') {
-        document.getElementById('hideClick').style.display = 'none';
-    }
-};
+ 
 
 function redirectToBooks() {
     let hd = document.getElementById('hideClick');
     hd.style.display = "none";
     localStorage.setItem('hideButton', 'true');
-    window.location.href = '../src/Books.html';
     hd.style.display = "none";
 
 }
