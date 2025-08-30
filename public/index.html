@@ -338,83 +338,20 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="swiper container mySwiper">
                             <h5 class="fw-bold mb-3">Books Collections</h5>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img src="https://covers.openlibrary.org/b/id/10523362-L.jpg" alt="Harry Potter" />
-                                    <div class="book-info">
-                                        <h5>Harry Potter and the Sorcerer’s Stone</h5>
-                                        <p>J.K. Rowling</p>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="https://covers.openlibrary.org/b/id/11153234-L.jpg"
-                                        alt="The Water Dancer" />
-                                    <div class="book-info">
-                                        <h5>The Water Dancer</h5>
-                                        <p>Ta-Nehisi Coates</p>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="https://covers.openlibrary.org/b/id/12829232-L.jpg"
-                                        alt="The Midnight Library" />
-                                    <div class="book-info">
-                                        <h5>The Midnight Library</h5>
-                                        <p>Matt Haig</p>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="https://covers.openlibrary.org/b/id/9872476-L.jpg" alt="The Alchemist" />
-                                    <div class="book-info">
-                                        <h5>The Alchemist</h5>
-                                        <p>Paulo Coelho</p>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="https://covers.openlibrary.org/b/id/10523362-L.jpg" alt="Harry Potter" />
-                                    <div class="book-info">
-                                        <h5>Harry Potter and the Sorcerer’s Stone</h5>
-                                        <p>J.K. Rowling</p>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="https://covers.openlibrary.org/b/id/11153234-L.jpg"
-                                        alt="The Water Dancer" />
-                                    <div class="book-info">
-                                        <h5>The Water Dancer</h5>
-                                        <p>Ta-Nehisi Coates</p>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="https://covers.openlibrary.org/b/id/12829232-L.jpg"
-                                        alt="The Midnight Library" />
-                                    <div class="book-info">
-                                        <h5>The Midnight Library</h5>
-                                        <p>Matt Haig</p>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="https://covers.openlibrary.org/b/id/9872476-L.jpg" alt="The Alchemist" />
-                                    <div class="book-info">
-                                        <h5>The Alchemist</h5>
-                                        <p>Paulo Coelho</p>
-                                    </div>
-                                </div>
+                            <div class="swiper-wrapper" id="booksWrapper">
+                                <!-- jQuery से slides आएँगे -->
                             </div>
 
+                            <!-- Pagination -->
                             <div class="swiper-pagination"></div>
+
+                            <!-- Navigation -->
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
                         </div>
+
                         <div class="container text-center py-5">
                             <h2 class="mb-4">Most expensive sales from April to June 2025</h2>
                             <p class="mb-5">
@@ -530,39 +467,64 @@
     </script>
 
 
+    
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var swiper = new Swiper(".mySwiper", {
-                effect: "coverflow",
-                grabCursor: true,
-                centeredSlides: true,
-                slidesPerView: "auto",
-                coverflowEffect: {
-                    rotate: 30,
-                    stretch: 0,
-                    depth: 200,
-                    modifier: 1,
-                    slideShadows: false,
-                },
-                loop: true,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "data.xml",  // आपका XML फाइल
+                dataType: "xml",
+                success: function (xml) {
+                    $(xml).find("book").each(function () {
+                        let title = $(this).find("title").text();
+                        let author = $(this).find("author").text();
+                        let image = $(this).find("image").text();
+
+                        let slide = `
+                    <div class="swiper-slide">
+                        <img src="${image}" alt="${title}" />
+                        <div class="book-info">
+                            <h5>${title}</h5>
+                            <p>${author}</p>
+                        </div>
+                    </div>
+                `;
+                        $("#booksWrapper").append(slide);
+                    });
+
+                    // Swiper Initialize
+                    var swiper = new Swiper(".mySwiper", {
+                        effect: "coverflow",
+                        grabCursor: true,
+                        centeredSlides: true,
+                        slidesPerView: "auto",
+                        coverflowEffect: {
+                            rotate: 30,
+                            stretch: 0,
+                            depth: 200,
+                            modifier: 1,
+                            slideShadows: false,
+                        },
+                        loop: true,
+                        autoplay: {
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                            dynamicBullets: true,   // Pagination में limited dots
+                            dynamicMainBullets: 3   // एक time में सिर्फ 3 dots दिखेंगे
+                        },
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                    });
+                }
             });
         });
     </script>
-
-
-
 
 
 </body>
