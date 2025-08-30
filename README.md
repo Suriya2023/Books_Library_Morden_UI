@@ -70,8 +70,6 @@ start index.html # Windows
 <p align="center"> <img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_Morden_UI/main/public/Images/ss.png" width="500"/> <img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_Morden_UI/main/public/Images/gf.jpeg" width="400" height="500"/> </p>
 📚 Book Collection
 <p align="center"> <img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_Morden_UI/main/public/Images/md.png" width="500"/> </p>
-🔮 Upcoming Features
-
 🌐 Backend integration (Node.js + MongoDB)
 
 🔑 User Authentication & Roles (Admin, Librarian, Student)
