@@ -15,6 +15,28 @@ body {
     box-shadow: none !important;
 }
 
+#autherBg {
+    max-height: 500px;
+    /* Right side authors ka height control */
+    overflow-y: auto;
+    /* Scroll agar zyada authors ho */
+    scrollbar-width: thin;
+}
+
+.newReleaseSwiper {
+    height: 320px;
+    /* Slider height set */
+}
+
+.newReleaseSwiper img {
+    height: 220px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
 .no-border:focus {
     border: none !important;
     box-shadow: none !important;

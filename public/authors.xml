@@ -1,0 +1,252 @@
+<authors>
+    <author id="1">
+        <name>J.K. Rowling</name>
+        <book>Harry Potter and the Sorcerer’s Stone</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/5/5d/J._K._Rowling_2010.jpg</image>
+    </author>
+    <author id="2">
+        <name>George R. R. Martin</name>
+        <book>A Game of Thrones</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/2/24/George_R._R._Martin_by_Gage_Skidmore_2.jpg</image>
+    </author>
+    <author id="3">
+        <name>Stephen King</name>
+        <book>The Shining</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/e/e3/Stephen_King%2C_Comicon.jpg</image>
+    </author>
+    <author id="4">
+        <name>Agatha Christie</name>
+        <book>Murder on the Orient Express</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/d/d9/Agatha_Christie.png</image>
+    </author>
+    <author id="5">
+        <name>Paulo Coelho</name>
+        <book>The Alchemist</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/2/2e/Paulo_Coelho_2010.jpg</image>
+    </author>
+    <author id="6">
+        <name>Dan Brown</name>
+        <book>The Da Vinci Code</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/0/0e/Dan_Brown_2017.jpg</image>
+    </author>
+    <author id="7">
+        <name>Harper Lee</name>
+        <book>To Kill a Mockingbird</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/3/3d/Harper_Lee_Nov07.jpg</image>
+    </author>
+    <author id="8">
+        <name>J.R.R. Tolkien</name>
+        <book>The Lord of the Rings</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/6/66/Tolkien_1916.jpg</image>
+    </author>
+    <author id="9">
+        <name>Ernest Hemingway</name>
+        <book>The Old Man and the Sea</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/0/0c/ErnestHemingway.jpg</image>
+    </author>
+    <author id="10">
+        <name>Mark Twain</name>
+        <book>The Adventures of Tom Sawyer</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/0/0c/Mark_Twain_by_AF_Bradley.jpg</image>
+    </author>
+    <author id="11">
+        <name>Charles Dickens</name>
+        <book>Great Expectations</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/3/32/Dickens_Gurney_head.jpg</image>
+    </author>
+    <author id="12">
+        <name>Jane Austen</name>
+        <book>Pride and Prejudice</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/c/cd/CassandraAusten-JaneAusten(c.1810)_hires.jpg</image>
+    </author>
+    <author id="13">
+        <name>Leo Tolstoy</name>
+        <book>War and Peace</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/0/0b/Leo_Tolstoy_1908_crop.jpg</image>
+    </author>
+    <author id="14">
+        <name>Fyodor Dostoevsky</name>
+        <book>Crime and Punishment</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/1/1e/Dostoevsky_1879.jpg</image>
+    </author>
+    <author id="15">
+        <name>Virginia Woolf</name>
+        <book>Mrs Dalloway</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/b/bc/Virginia_Woolf_1927.jpg</image>
+    </author>
+    <author id="16">
+        <name>Oscar Wilde</name>
+        <book>The Picture of Dorian Gray</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/a/a0/Oscar_Wilde_portrait.jpg</image>
+    </author>
+    <author id="17">
+        <name>Franz Kafka</name>
+        <book>The Metamorphosis</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/4/4c/Kafka1906_cropped.jpg</image>
+    </author>
+    <author id="18">
+        <name>H.G. Wells</name>
+        <book>The Time Machine</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/0/0b/H_G_Wells_pre_1922.jpg</image>
+    </author>
+    <author id="19">
+        <name>Mary Shelley</name>
+        <book>Frankenstein</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/1/1e/RothwellMaryShelley.jpg</image>
+    </author>
+    <author id="20">
+        <name>Bram Stoker</name>
+        <book>Dracula</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/3/32/Bram_Stoker_1906.jpg</image>
+    </author>
+    <author id="21">
+        <name>Homer</name>
+        <book>The Odyssey</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/5/5e/Homer_British_Museum.jpg</image>
+    </author>
+    <author id="22">
+        <name>Dante Alighieri</name>
+        <book>The Divine Comedy</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/7/76/Dante-alighieri.jpg</image>
+    </author>
+    <author id="23">
+        <name>John Milton</name>
+        <book>Paradise Lost</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/0/0b/John-milton.jpg</image>
+    </author>
+    <author id="24">
+        <name>Herman Melville</name>
+        <book>Moby-Dick</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/0/0b/Herman_Melville.jpg</image>
+    </author>
+    <author id="25">
+        <name>Emily Brontë</name>
+        <book>Wuthering Heights</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/0/0b/Emily_Bront%C3%AB.jpg</image>
+    </author>
+    <author id="26">
+        <name>Charlotte Brontë</name>
+        <book>Jane Eyre</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/7/7e/Charlotte_Bront%C3%AB.jpg</image>
+    </author>
+    <author id="27">
+        <name>Victor Hugo</name>
+        <book>Les Misérables</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/7/7d/Victor_Hugo_by_%C3%89tienne_Carjat_1876_-_full.jpg</image>
+    </author>
+    <author id="28">
+        <name>Alexandre Dumas</name>
+        <book>The Count of Monte Cristo</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/7/74/Alexandre_Dumas_p%C3%A8re_1855.jpg</image>
+    </author>
+    <author id="29">
+        <name>Miguel de Cervantes</name>
+        <book>Don Quixote</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/6/6e/Cervantes_J%C3%A1uregui.jpg</image>
+    </author>
+    <author id="30">
+        <name>Gabriel García Márquez</name>
+        <book>One Hundred Years of Solitude</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/8/89/Gabriel_Garcia_Marquez.jpg</image>
+    </author>
+    <author id="31">
+        <name>Albert Camus</name>
+        <book>The Stranger</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/2/27/Albert_Camus%2C_gagnant_de_prix_Nobel%2C_portrait_en_buste%2C_pos%C3%A9_au_bureau%2C_faisant_face_%C3%A0_gauche%2C_cigarette_de_tabagisme.jpg</image>
+    </author>
+    <author id="32">
+        <name>Marcel Proust</name>
+        <book>In Search of Lost Time</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/f/f0/Marcel_Proust_1900.jpg</image>
+    </author>
+    <author id="33">
+        <name>James Joyce</name>
+        <book>Ulysses</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/0/0b/James_Joyce_by_Alex_Ehrenzweig%2C_1915-cropped.jpg</image>
+    </author>
+    <author id="34">
+        <name>William Faulkner</name>
+        <book>The Sound and the Fury</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/1/12/William_Faulkner_1954.jpg</image>
+    </author>
+    <author id="35">
+        <name>Haruki Murakami</name>
+        <book>Norwegian Wood</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/7/71/Haruki_Murakami.jpg</image>
+    </author>
+    <author id="36">
+        <name>Khaled Hosseini</name>
+        <book>The Kite Runner</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/e/e8/Khaled_Hosseini_2013.jpg</image>
+    </author>
+    <author id="37">
+        <name>Salman Rushdie</name>
+        <book>Midnight’s Children</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/4/4a/Salman_Rushdie_2016.jpg</image>
+    </author>
+    <author id="38">
+        <name>Chinua Achebe</name>
+        <book>Things Fall Apart</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/f/f5/Chinua_Achebe_-_World_Economic_Forum_2008.jpg</image>
+    </author>
+    <author id="39">
+        <name>Ralph Ellison</name>
+        <book>Invisible Man</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/0/0b/Ralph_Ellison_photo_portrait.jpg</image>
+    </author>
+    <author id="40">
+        <name>Toni Morrison</name>
+        <book>Beloved</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/5/5e/Toni_Morrison_2008-2.jpg</image>
+    </author>
+    <author id="41">
+        <name>Margaret Atwood</name>
+        <book>The Handmaid’s Tale</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/f/fb/Margaret_Atwood_Eden_Mills_Writers_Festival_2012.jpg</image>
+    </author>
+    <author id="42">
+        <name>Arthur Conan Doyle</name>
+        <book>The Hound of the Baskervilles</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/4/4f/Arthur_Conan_Doyle_by_Walter_Benington%2C_1914.png</image>
+    </author>
+    <author id="43">
+        <name>Jules Verne</name>
+        <book>Journey to the Center of the Earth</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/f/f4/Jules_Verne.jpg</image>
+    </author>
+    <author id="44">
+        <name>George Orwell</name>
+        <book>1984</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/7/7e/George_Orwell_press_photo.jpg</image>
+    </author>
+    <author id="45">
+        <name>Aldous Huxley</name>
+        <book>Brave New World</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/6/6b/Aldous_Huxley_1934.jpg</image>
+    </author>
+    <author id="46">
+        <name>Ray Bradbury</name>
+        <book>Fahrenheit 451</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/7/7d/Ray_Bradbury_%281974%29_-cropped.jpg</image>
+    </author>
+    <author id="47">
+        <name>Kurt Vonnegut</name>
+        <book>Slaughterhouse-Five</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/9/9d/Kurt_Vonnegut_1972.jpg</image>
+    </author>
+    <author id="48">
+        <name>Philip K. Dick</name>
+        <book>Do Androids Dream of Electric Sheep?</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/0/0c/Philip_K_Dick.jpg</image>
+    </author>
+    <author id="49">
+        <name>Isaac Asimov</name>
+        <book>Foundation</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/9/94/Isaac.Asimov01.jpg</image>
+    </author>
+    <author id="50">
+        <name>C.S. Lewis</name>
+        <book>The Chronicles of Narnia</book>
+        <image>https://upload.wikimedia.org/wikipedia/commons/2/29/Cs-lewis-photography.jpg</image>
+    </author>
+</authors>

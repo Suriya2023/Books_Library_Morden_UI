@@ -212,7 +212,6 @@
                             <h5 class="fw-bold text-dark mb-3">Books you read last</h5>
 
                             <div class="carousel-nav rounded">
-                                <!-- 👇 Abhi empty h, JS se fill hoga -->
                                 <div class="owl-carousel rounded-4"></div>
 
                                 <button class="nav-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
@@ -226,128 +225,38 @@
                         <div class="container my-5">
                             <div class="row">
                                 <div class="col-lg-9">
-                                    <h5 class="fw-bold mb-3">New Release</h5>
-                                    <div class="d-flex gap-2 overflow-auto pb-3" style="scrollbar-width:none;">
-                                        <div class="text-center" style="min-width:150px;">
-                                            <img src="https://m.media-amazon.com/images/I/81vpsIs58WL.jpg"
-                                                class="rounded-3 shadow-sm"
-                                                style="width:150px; height:220px; object-fit:cover;">
-                                            <h6 class="mt-2 fw-bold">The Glass Hotel</h6>
-                                            <small class="text-muted">Emily St. John</small>
-                                            <div><span class="badge bg-light text-dark mt-1">Mystery</span></div>
+                                    <h5 class="fw-bold mb-3">New Release (Fiction)</h5>
+
+                                    <div class="swiper newReleaseSwiper">
+                                        <div class="swiper-wrapper" id="newReleaseWrapper">
                                         </div>
 
-                                        <div class="text-center" style="min-width:150px;">
-                                            <img src="https://m.media-amazon.com/images/I/71m-MxdJ2WL.jpg"
-                                                class="rounded-3 shadow-sm"
-                                                style="width:150px; height:220px; object-fit:cover;">
-                                            <h6 class="mt-2 fw-bold">The Book of Longings</h6>
-                                            <small class="text-muted">Sue Monk</small>
-                                            <div><span class="badge bg-light text-dark mt-1">Fiction</span></div>
-                                        </div>
-
-                                        <div class="text-center" style="min-width:150px;">
-                                            <img src="https://m.media-amazon.com/images/I/81wGF+e1rBL.jpg"
-                                                class="rounded-3 shadow-sm"
-                                                style="width:150px; height:220px; object-fit:cover;">
-                                            <h6 class="mt-2 fw-bold">Darling Rose Gold</h6>
-                                            <small class="text-muted">Stephanie Wrobel</small>
-                                            <div><span class="badge bg-light text-dark mt-1">Thriller</span></div>
-                                        </div>
-
-                                        <div class="text-center" style="min-width:150px;">
-                                            <img src="https://m.media-amazon.com/images/I/81vpsIs58WL.jpg"
-                                                class="rounded-3 shadow-sm"
-                                                style="width:150px; height:220px; object-fit:cover;">
-                                            <h6 class="mt-2 fw-bold">The Glass Hotel</h6>
-                                            <small class="text-muted">Emily St. John</small>
-                                            <div><span class="badge bg-light text-dark mt-1">Mystery</span></div>
-                                        </div>
-
-                                        <div class="text-center" style="min-width:150px;">
-                                            <img src="https://m.media-amazon.com/images/I/71m-MxdJ2WL.jpg"
-                                                class="rounded-3 shadow-sm"
-                                                style="width:150px; height:220px; object-fit:cover;">
-                                            <h6 class="mt-2 fw-bold">The Book of Longings</h6>
-                                            <small class="text-muted">Sue Monk</small>
-                                            <div><span class="badge bg-light text-dark mt-1">Fiction</span></div>
-                                        </div>
-
-                                        <div class="text-center" style="min-width:150px;">
-                                            <img src="https://m.media-amazon.com/images/I/81wGF+e1rBL.jpg"
-                                                class="rounded-3 shadow-sm"
-                                                style="width:150px; height:220px; object-fit:cover;">
-                                            <h6 class="mt-2 fw-bold">Darling Rose Gold</h6>
-                                            <small class="text-muted">Stephanie Wrobel</small>
-                                            <div><span class="badge bg-light text-dark mt-1">Thriller</span></div>
-                                        </div>
+                                        <div class="swiper-pagination newRelease-pagination"></div>
+                                        <div class="swiper-button-prev newRelease-prev d-none"></div>
+                                        <div class="swiper-button-next newRelease-next d-none"></div>
                                     </div>
                                 </div>
 
-                                <div id="autherBg" class="col-lg-3 ">
+                                <div id="autherBg" class="col-lg-3">
                                     <h5 class="fw-bold mb-3">Famous Authors</h5>
-                                    <div class="d-flex flex-column gap-3">
-                                        <div class="d-flex align-items-center gap-3">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/J._K._Rowling_2010.jpg"
-                                                class="rounded-circle"
-                                                style="width:45px; height:45px; object-fit:cover;">
-                                            <div>
-                                                <h6 class="mb-0 fw-bold">J.K Rowling</h6>
-                                                <small class="text-muted">10 Books</small>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex align-items-center gap-3">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Stephen_King%2C_Comicon.jpg"
-                                                class="rounded-circle"
-                                                style="width:45px; height:45px; object-fit:cover;">
-                                            <div>
-                                                <h6 class="mb-0 fw-bold">Stephen King</h6>
-                                                <small class="text-muted">61 Novels</small>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex align-items-center gap-3">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/J._K._Rowling_2010.jpg"
-                                                class="rounded-circle"
-                                                style="width:45px; height:45px; object-fit:cover;">
-                                            <div>
-                                                <h6 class="mb-0 fw-bold">J.K Rowling</h6>
-                                                <small class="text-muted">10 Books</small>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex align-items-center gap-3">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Stephen_King%2C_Comicon.jpg"
-                                                class="rounded-circle"
-                                                style="width:45px; height:45px; object-fit:cover;">
-                                            <div>
-                                                <h6 class="mb-0 fw-bold">Stephen King</h6>
-                                                <small class="text-muted">61 Novels</small>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-3">
-                                            <img src="./public/Images/sr.png" class="rounded-circle"
-                                                style="width:45px; height:45px; object-fit:cover;">
-                                            <div>
-                                                <h6 class="mb-0 fw-bold">Suraj Rajput</h6>
-                                                <small class="text-muted">61 Novels</small>
-                                            </div>
+                                    <div class="swiper authorSwiper">
+                                        <div class="swiper-wrapper" id="authorWrapper">
                                         </div>
                                     </div>
                                 </div>
+
+
                             </div>
                         </div>
+
+
                         <div class="swiper container mySwiper">
                             <h5 class="fw-bold mb-3">Books Collections</h5>
                             <div class="swiper-wrapper" id="booksWrapper">
-                                <!-- jQuery से slides आएँगे -->
                             </div>
 
-                            <!-- Pagination -->
                             <div class="swiper-pagination"></div>
 
-                            <!-- Navigation -->
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
                         </div>
@@ -467,12 +376,12 @@
     </script>
 
 
-    
+
     <script>
         $(document).ready(function () {
             $.ajax({
                 type: "GET",
-                url: "data.xml",  // आपका XML फाइल
+                url: "data.xml",
                 dataType: "xml",
                 success: function (xml) {
                     $(xml).find("book").each(function () {
@@ -492,7 +401,7 @@
                         $("#booksWrapper").append(slide);
                     });
 
-                    // Swiper Initialize
+
                     var swiper = new Swiper(".mySwiper", {
                         effect: "coverflow",
                         grabCursor: true,
@@ -513,8 +422,8 @@
                         pagination: {
                             el: ".swiper-pagination",
                             clickable: true,
-                            dynamicBullets: true,   // Pagination में limited dots
-                            dynamicMainBullets: 3   // एक time में सिर्फ 3 dots दिखेंगे
+                            dynamicBullets: true,
+                            dynamicMainBullets: 3
                         },
                         navigation: {
                             nextEl: ".swiper-button-next",
@@ -525,6 +434,144 @@
             });
         });
     </script>
+
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "data.xml",   // apka XML file
+                dataType: "xml",
+                success: function (xml) {
+                    $(xml).find("book").each(function () {
+                        var title = $(this).find("title").text();
+                        var author = $(this).find("author").text();
+                        var type = $(this).find("type").text();
+                        var image = $(this).find("image").text();
+
+                        // ✅ Filter: only Fiction books
+                        if (type.toLowerCase() === "fiction") {
+                            var slide = `
+                        <div class="swiper-slide text-center" style="min-width:150px;">
+                            <img src="${image}" class="rounded-3 shadow-sm"
+                                 style="width:150px; height:220px; object-fit:cover;">
+                            <h6 class="mt-2 fw-bold">${title}</h6>
+                            <small class="text-muted">${author}</small>
+                            <div><span class="badge bg-light text-dark mt-1">${type}</span></div>
+                        </div>
+                    `;
+                            $("#newReleaseWrapper").append(slide);
+                        }
+                    });
+
+                    // ✅ Swiper initialize only after Fiction books are added
+                    var newReleaseSwiper = new Swiper(".newReleaseSwiper", {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                        loop: true,
+                        autoplay: {
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        },
+                        pagination: {
+                            el: ".newRelease-pagination",
+                            clickable: true,
+                            dynamicBullets: true,
+                            dynamicMainBullets: 3
+                        },
+                        navigation: {
+                            nextEl: ".newRelease-next",
+                            prevEl: ".newRelease-prev",
+                        },
+                    });
+                },
+                error: function () {
+                    console.error("❌ Error loading XML");
+                }
+            });
+        });
+    </script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var newReleaseSwiper = new Swiper(".newReleaseSwiper", {
+                slidesPerView: 3,   // ek bar me 3 books
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".newRelease-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".newRelease-next",
+                    prevEl: ".newRelease-prev",
+                },
+            });
+        });
+    </script>
+    <script>
+        var authorSwiper = new Swiper(".authorSwiper", {
+            direction: "vertical",
+            slidesPerView: 5,
+            spaceBetween: 15,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            allowTouchMove: false,
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "authors.xml",
+                dataType: "xml",
+                success: function (xml) {
+                    $(xml).find("author").each(function () {
+                        var name = $(this).find("name").text();
+                        var books = $(this).find("books").text();
+                        var image = $(this).find("image").text();
+
+                        var slide = `
+          <div class="swiper-slide">
+            <div class="d-flex align-items-center gap-3 p-2 rounded shadow-sm bg-light">
+              <img src="${image}" class="rounded-circle border"
+                   style="width:60px; height:60px; object-fit:cover;">
+              <div>
+                <h6 class="mb-0 fw-bold">${name}</h6>
+                <small class="text-muted">${books}</small>
+              </div>
+            </div>
+          </div>
+        `;
+                        $("#authorWrapper").append(slide);
+                    });
+
+                    var authorSwiper = new Swiper(".authorSwiper", {
+                        direction: "vertical",
+                        slidesPerView: 5,
+                        spaceBetween: 15,
+                        loop: true,
+                        autoplay: {
+                            delay: 2000,
+                            disableOnInteraction: false,
+                        },
+                        allowTouchMove: false,
+                    });
+                }
+            });
+        });
+    </script>
+
 
 
 </body>
