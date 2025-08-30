@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Details | Library Management System</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../public/index.html">My Library</a>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="row g-4" id="details"></div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">© 2025 My Library</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let params = new URLSearchParams(window.location.search);
+            let bookId = params.get("id");
+
+            if (!bookId) {
+                $("#details").html(`<div class="alert alert-warning">No book selected.</div>`);
+                return;
+            }
+
+            $.ajax({
+                type: "GET",
+                url: "data.xml",
+                dataType: "xml",
+                success: function (xml) {
+                    let found = false;
+                    $(xml).find("book").each(function () {
+                        if ($(this).attr("id") === bookId) {
+                            found = true;
+                            let title = $(this).find("title").text();
+                            let author = $(this).find("author").text();
+                            let type = $(this).find("type").text();
+                            let details = $(this).find("details").text();
+                            let img = $(this).find("image").text();
+
+                            let html = `
+              <div class="col-md-5">
+                <img src="${img}" class="img-fluid rounded shadow" alt="${title}">
+              </div>
+              <div class="col-md-7">
+                <h2 class="fw-bold">${title}</h2>
+                <p><strong>Author:</strong> ${author}</p>
+                <p><strong>Type:</strong> ${type}</p>
+                <p><strong>Book Info:</strong> ${details}</p>
+                <a href="books.html" class="btn btn-outline-secondary mt-3">Back to Books</a>
+              </div>`;
+                            $("#details").html(html);
+                        }
+                    });
+                    if (!found) {
+                        $("#details").html(`<div class="alert alert-danger">Book not found.</div>`);
+                    }
+                },
+                error: function () {
+                    $("#details").html(`<div class="alert alert-danger">Failed to load book details.</div>`);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

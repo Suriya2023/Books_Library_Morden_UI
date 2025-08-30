@@ -72,7 +72,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../src/Book_Details.html"
+                                    <a href="../src/book-details.html"
                                         class="nav-link load-page text-dark rounded px-3 py-2 d-flex align-items-center gap-2">
                                         <i class="bi bi-journal-text"></i> Book Details
                                     </a>
@@ -137,7 +137,7 @@
                         </li>
 
                         <li class="nav-item flex-fill">
-                            <a href="../src/Book_Details.html"
+                            <a href="../src/book-details.html"
                                 class="nav-link d-flex flex-column load-page align-items-center py-2">
                                 <i class="bi bi-journal-text fs-5"></i>
                                 <small>Details</small>
@@ -160,7 +160,6 @@
                         </li>
                     </ul>
                 </nav>
-
 
 
 
@@ -225,28 +224,23 @@
                         <div class="container my-5">
                             <div class="container my-5">
                                 <div class="row g-4">
-                                    <!-- New Release Section -->
                                     <div class="col-lg-9 col-md-12">
                                         <h5 class="fw-bold mb-3">New Release (Fiction)</h5>
 
                                         <div class="swiper newReleaseSwiper">
                                             <div class="swiper-wrapper" id="newReleaseWrapper">
-                                                <!-- Slides from XML will come here -->
                                             </div>
 
-                                            <!-- Pagination & Nav -->
                                             <div class="swiper-pagination newRelease-pagination"></div>
                                             <div class="swiper-button-prev newRelease-prev d-none d-lg-block"></div>
                                             <div class="swiper-button-next newRelease-next d-none d-lg-block"></div>
                                         </div>
                                     </div>
 
-                                    <!-- Authors Section -->
                                     <div id="autherBg" class="col-lg-3 col-md-12">
                                         <h5 class="fw-bold mb-3">Famous Authors</h5>
                                         <div class="swiper authorSwiper">
                                             <div class="swiper-wrapper" id="authorWrapper">
-                                                <!-- Author slides will come here -->
                                             </div>
                                         </div>
                                     </div>
@@ -323,6 +317,7 @@
             </div>
         </div>
     </header>
+    <img src="../src/book-details.html" alt="">
 
 
     <script>
@@ -333,6 +328,7 @@
                 dataType: "xml",
                 success: function (xml) {
                     $(xml).find("book").each(function () {
+                        let id = $(this).attr("id");
                         const title = $(this).find("title").text();
                         const details = $(this).find("details").text();
                         const image = $(this).find("image").text();
@@ -340,11 +336,14 @@
                         const card = `
                   <div class="book-card d-flex align-items-center p-3 rounded-4 text-white"
                        style="background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);">
-                      <img src="${image}" class="book-img rounded-3 me-3"
-                           style="width:60px;height:80px;object-fit:cover;">
+                     <img onclick="window.location.href = '../src/book-details.html?id=${id}'" 
+     src="${image}" 
+     class="book-img rounded-3 me-3"
+     style="width:60px;height:80px;object-fit:cover;">
+
                       <div>
                           <h6 class="fw-bold mb-1">${title}</h6>
-                          <small>${details}</small>
+                          <small >${details}</small>
                       </div>
                   </div>
                 `;
@@ -362,7 +361,7 @@
                             0: { items: 1.2 },
                             576: { items: 2 },
                             768: { items: 2.5 },
-                            992: { items: 3 }   
+                            992: { items: 3 }
                         }
                     });
 
@@ -390,13 +389,15 @@
                 dataType: "xml",
                 success: function (xml) {
                     $(xml).find("book").each(function () {
+                        let id = $(this).attr("id");
+
                         let title = $(this).find("title").text();
                         let author = $(this).find("author").text();
                         let image = $(this).find("image").text();
 
                         let slide = `
                     <div class="swiper-slide">
-                        <img loading="lazy" src="${image}" alt="${title}" />
+                        <img onclick="window.location.href = '../src/book-details.html?id=${id}'" loading="lazy" src="${image}" alt="${title}" />
                         <div class="book-info">
                             <h5>${title}</h5>
                             <p>${author}</p>
@@ -445,20 +446,22 @@
         $(document).ready(function () {
             $.ajax({
                 type: "GET",
-                url: "data.xml",   
+                url: "data.xml",
                 dataType: "xml",
                 success: function (xml) {
                     $(xml).find("book").each(function () {
+                        let id = $(this).attr("id");
+
                         var title = $(this).find("title").text();
                         var author = $(this).find("author").text();
                         var type = $(this).find("type").text();
                         var image = $(this).find("image").text();
 
-                    
+
                         if (type.toLowerCase() === "fiction") {
                             var slide = `
                         <div class="swiper-slide text-center" style="min-width:150px;">
-                            <img src="${image}" loading="lazy" class="rounded-3 shadow-sm"
+                            <img onclick="window.location.href = '../src/book-details.html?id=${id}'" src="${image}" loading="lazy" class="rounded-3 shadow-sm"
                                  style="width:150px; height:220px; object-fit:cover;">
                             <h6 class="mt-2 fw-bold">${title}</h6>
                             <small class="text-muted">${author}</small>
@@ -469,7 +472,7 @@
                         }
                     });
 
-      
+
                     var newReleaseSwiper = new Swiper(".newReleaseSwiper", {
                         slidesPerView: 3,
                         spaceBetween: 20,
@@ -502,7 +505,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var newReleaseSwiper = new Swiper(".newReleaseSwiper", {
-                slidesPerView: 3,   
+                slidesPerView: 3,
                 spaceBetween: 20,
                 loop: true,
                 autoplay: {
@@ -535,6 +538,7 @@
     </script>
 
     <script>
+
         $(document).ready(function () {
             $.ajax({
                 type: "GET",
@@ -542,6 +546,8 @@
                 dataType: "xml",
                 success: function (xml) {
                     $(xml).find("author").each(function () {
+                        let id = $(this).attr("id");
+
                         var name = $(this).find("name").text();
                         var books = $(this).find("books").text();
                         var image = $(this).find("image").text();
@@ -549,7 +555,7 @@
                         var slide = `
           <div class="swiper-slide">
             <div class="d-flex align-items-center gap-3 p-2 rounded shadow-sm bg-light">
-              <img src="${image}" loading="lazy" class="rounded-circle border"
+              <img  onclick="window.location.href = '../src/book-details.html?id=${id}'"  "src="${image}" loading="lazy" class="rounded-circle border"
                    style="width:60px; height:60px; object-fit:cover;">
               <div>
                 <h6 class="mb-0 fw-bold">${name}</h6>

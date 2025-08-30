@@ -4,15 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <title>Document</title>
 </head>
 
 <body>
-    <!-- Yaha file ka content load hoga -->
-    <div id="content-area" class="p-4">
-        <h2>Default Dashboard Content</h2>
-        <p>Yaha pe aapka normal content dikhega.</p>
-    </div>
+    <main class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-md-6">
+                <img src="../public/Images/about.png" alt="Library" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold mb-3">About Me</h2>
+                <p>I am <b>[Your Name]</b>, a Bachelor of Computer Applications (BCA) student currently working on my
+                    Advance Web Design Practical assignment for 2025/26.
+                    This project is a <b>Library Management System</b> built using <b>HTML, Bootstrap, jQuery, and
+                        XML</b>. The website is fully responsive and works on both desktop and mobile screens.</p>
+            </div>
+        </div>
+
+        <!-- Vision & Mission -->
+        <section class="mt-5">
+            <div class="row text-center g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="fw-bold mb-3 text-primary">Vision</h3>
+                            <p class="text-muted">To create a modern and digital library platform where books and
+                                resources are accessible anytime, anywhere, for every learner.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="fw-bold mb-3 text-success">Mission</h3>
+                            <ul class="list-unstyled text-muted">
+                                <li>📚 Build a responsive and user-friendly library website.</li>
+                                <li>🔎 Organize and display books dynamically using XML.</li>
+                                <li>🖊️ Provide complete book details (author, type, description, price).</li>
+                                <li>📩 Enable easy communication with the library via contact form.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">© 2025 My Library. Designed for WSYBCA Practical Assignment.</p>
+        </div>
+    </footer>
+
 </body>
 
 </html>
