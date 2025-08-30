@@ -5,11 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../public/StyleSheet/style.css">
+    <title>About</title>
 </head>
 
 <body>
+    <div class="conatainer">
+        <nav class="navbar no-border bg-transparent navbar-expand-lg py-2">
+            <div class="container-fluid">
+                <a href="../public/index.html" class="navbar-brand fw-bold fs-4">Books Lib<span
+                        class="text-warning">.</span></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <form class="d-flex mx-auto my-2 my-lg-0 w-50">
+                        <div id="rounded" class="search-box border d-flex align-items-center w-100 px-3">
+                            <input class="form-control no-border bg-transparent" type="search"
+                                placeholder="Search your books" />
+                            <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                        </div>
+                    </form>
+
+                    <ul class="navbar-nav ms-auto align-items-center gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link position-relative fw-medium" href="#">
+                                New Release<sup class="text-warning fs-3 fw-bolder">.</sup>
+                                <span class="badge-dot"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#">Featured</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
     <main class="container py-5">
+
         <div class="row g-5 align-items-center">
             <div class="col-md-6">
                 <img src="../public/Images/about.png" alt="Library" class="img-fluid rounded shadow">

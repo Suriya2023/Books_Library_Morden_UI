@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 .then(res => res.text())
                 .then(data => {
                     hideContent.style.display = "none";
-contentArea.style.display = "block"
+                    contentArea.style.display = "block"
                     contentArea.innerHTML = data;
                 })
                 .catch(err => {
@@ -21,5 +21,21 @@ contentArea.style.display = "block"
         });
     });
 });
+
+window.onload = function () {
+    if (localStorage.getItem('hideButton') === 'true') {
+        document.getElementById('hideClick').style.display = 'none';
+    }
+};
+
+function redirectToBooks() {
+    let hd = document.getElementById('hideClick');
+    hd.style.display = "none";
+    localStorage.setItem('hideButton', 'true');
+    window.location.href = '../src/Books.html';
+    hd.style.display = "none";
+
+}
+
 
 

@@ -8,12 +8,59 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/StyleSheet/style.css">
 </head>
 
+
 <body>
+    <div class="container">
+        <nav class="navbar no-border bg-transparent navbar-expand-lg py-2">
+            <div class="container-fluid">
+                <a href="../public/index.html" class="navbar-brand fw-bold fs-4">Books Lib<span
+                        class="text-warning">.</span></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <form class="d-flex mx-auto my-2 my-lg-0 w-50">
+                        <div id="rounded" class="search-box border d-flex align-items-center w-100 px-3">
+                            <input class="form-control no-border bg-transparent" type="search"
+                                placeholder="Search your books" />
+                            <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                        </div>
+                    </form>
+
+                    <ul class="navbar-nav ms-auto align-items-center gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link position-relative fw-medium" href="#">
+                                New Release<sup class="text-warning fs-3 fw-bolder">.</sup>
+                                <span class="badge-dot"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#">Featured</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
 
     <header class="bg-light py-5 text-center">
         <h1 class="fw-bold">Our Book Collection</h1>
+
+        <div>
+            <br>
+            <button id="hideClick" onclick="redirectToBooks()" class=" btn btn-primary btn-lg">Show Books</button>
+            <br>
+            <br>
+        </div>
         <p class="text-muted">Explore knowledge through our library books</p>
     </header>
 
@@ -41,7 +88,7 @@
                         let card = `
             <div class="col-sm-6 col-md-4 col-lg-3">
               <div class="card h-100 shadow-sm border-0">
-                <img src="${img}" class="card-img-top" alt="${title}">
+                <img onclick="window.location.href = './book-details.html?id=${id}'" src="${img}" class="card-img-top" alt="${title}">
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title">${title}</h5>
                   <p class="text-muted small">${details}</p>
@@ -57,6 +104,18 @@
                 }
             });
         });
+    </script>
+
+    <script>
+
+        // Function definition
+        function redirectToBooks() {
+            let hd = document.getElementById('hideClick');
+            hd.style.display = "none";
+            window.location.href = '../src/Books.html';
+            hd.style.display = "none";
+
+        }
     </script>
 </body>
 
