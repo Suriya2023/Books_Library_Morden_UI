@@ -69,7 +69,9 @@ start index.html # Windows
 🏠 Dashboard <br/>
 <img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_Morden_UI/main/public/Images/ss.png" width="700"/> <br/>
 📚 Book Collection<br/>
-<img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_Morden_UI/main/public/Images/gf.jpeg" width="600"/> <br/>
+<img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_Morden_UI/main/public/Images/gf.jpeg" width="400"/>  
+<img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_Morden_UI/main/public/Images/md.png" width="400"/> <br/>
+
 🔮 Upcoming Features
 
 🌐 Backend integration (Node.js + MongoDB)
