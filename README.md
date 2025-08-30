@@ -51,7 +51,7 @@ Designed to make reading, exploring, and managing books **visually engaging and 
 Clone the repo & open `index.html`
 
 bash
-git clone https://github.com/your-username/LibraryManagementSystem.git
+git clone https://github.com/Suriya2023/Books_Library_Morden_UI.git
 cd LibraryManagementSystem
 
 Run in your browser:
@@ -66,12 +66,16 @@ start index.html # Windows
 
 ✨ Attractive showcase of the UI:
 
-🏠 Dashboard <br/>
-<img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_Morden_UI/main/public/Images/ss.png" width="700"/> <br/>
-📚 Book Collection<br/>
-<img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_Morden_UI/main/public/Images/gf.jpeg" width="400"/>  
-<img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_Morden_UI/main/public/Images/md.png" width="400"/> <br/>
+🏠 Dashboard
 
+<p align="center">
+ <img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_Morden_UI/main/public/Images/ss.png" width="500"/> 
+<img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_Morden_UI/main/public/Images/gf.jpeg" width="400" height="500"/> 
+</p>
+📚 Book Collection
+<p align="center"> 
+<img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_Morden_UI/main/public/Images/md.png" width="500"/> 
+</p>
 🔮 Upcoming Features
 
 🌐 Backend integration (Node.js + MongoDB)
