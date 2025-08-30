@@ -71,7 +71,7 @@ start index.html  # Windows
 🏠 Dashboard
 <img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_Morden_UI/main/public/Images/ss.png" width="700"/> <br/>
 📚 Book Collection
-<img src="./public/Images/screenshot-books.png" width="700"/>
+<img src="https://raw.githubusercontent.com/Suriya2023/Books_Library_Morden_UI/main/public/Images/gf.jpg" width="700"/>
 🔮 Upcoming Features
 
 🌐 Backend integration (Node.js + MongoDB)
