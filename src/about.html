@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/StyleSheet/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
     <script src="../bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <title>About</title>
 </head>
@@ -26,7 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <form class="d-flex mx-auto my-2 my-lg-0 w-50">
                         <div id="rounded" class="search-box border d-flex align-items-center w-100 px-3">
-                            <input class="form-control no-border bg-transparent" type="search"
+                            <input id="searchInput" class="form-control no-border bg-transparent" type="search"
                                 placeholder="Search your books" />
                             <i class="fa-solid fa-magnifying-glass text-muted"></i>
                         </div>
@@ -67,7 +69,8 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="../public/index.html"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                            <a class="nav-link" href="../public/index.html"><i
+                                    class="fa-solid fa-ellipsis-vertical"></i></a>
                         </li>
 
                     </ul>
@@ -75,7 +78,7 @@
                 </div>
             </div>
         </nav>
-
+        <div id="results" class="row mt-4"></div>
 
         <nav class="mobile-bottom-nav navbar fixed-bottom d-lg-none shadow-lg border-top bg-white">
             <ul class="nav justify-content-around w-100 text-center fw-semibold">
@@ -119,6 +122,8 @@
         </nav>
 
 
+
+
     </div>
 
     <main class="container py-5">
@@ -129,14 +134,15 @@
             </div>
             <div class="col-md-6">
                 <h2 class="fw-bold mb-3">About Me</h2>
-                <p>I am <b>[Your Name]</b>, a Bachelor of Computer Applications (BCA) student currently working on my
+                <p>I am <b>Suraj R Rajput (SR) </b>, a Bachelor of Computer Applications (BCA) student currently working
+                    on my
                     Advance Web Design Practical assignment for 2025/26.
                     This project is a <b>Library Management System</b> built using <b>HTML, Bootstrap, jQuery, and
                         XML</b>. The website is fully responsive and works on both desktop and mobile screens.</p>
             </div>
         </div>
 
-        <!-- Vision & Mission -->
+
         <section class="mt-5">
             <div class="row text-center g-4">
                 <div class="col-md-6">
@@ -165,12 +171,71 @@
         </section>
     </main>
 
-    <!-- Footer -->
+
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <div class="container">
             <p class="mb-0">© 2025 My Library. Designed for WSYBCA Practical Assignment.</p>
         </div>
     </footer>
+
+    <script>
+        $(document).ready(function () {
+            let booksData = [];
+
+            // Load XML data
+            $.ajax({
+                type: "GET",
+                url: "data.xml",
+                dataType: "xml",
+                success: function (xml) {
+                    $(xml).find("book").each(function () {
+                        booksData.push({
+                            id: $(this).attr("id"),
+                            title: $(this).find("title").text(),
+                            author: $(this).find("author").text(),
+                            type: $(this).find("type").text(),
+                            details: $(this).find("details").text(),
+                            image: $(this).find("image").text()
+                        });
+                    });
+                }
+            });
+
+            $("#searchInput").on("keyup", function () {
+                let query = $(this).val().toLowerCase();
+                let output = "";
+
+                if (query.length > 0) {
+                    let filtered = booksData.filter(book =>
+                        book.title.toLowerCase().includes(query) ||
+                        book.author.toLowerCase().includes(query) ||
+                        book.type.toLowerCase().includes(query)
+                    );
+
+                    if (filtered.length > 0) {
+                        filtered.forEach(book => {
+                            output += `
+                      <div class="col-md-4 mb-3">
+                        <div class="card h-100 shadow-sm">
+                          <img src="${book.image}" class="card-img-top" alt="${book.title}">
+                          <div class="card-body">
+                            <h5 class="card-title">${book.title}</h5>
+                            <p class="card-text"><strong>Author:</strong> ${book.author}</p>
+                            <p class="card-text"><strong>Type:</strong> ${book.type}</p>
+                            <p class="text-muted">${book.details}</p>
+                          </div>
+                        </div>
+                      </div>`;
+                        });
+                    } else {
+                        output = "<p class='text-danger'>No results found</p>";
+                    }
+                }
+
+                $("#results").html(output);
+            });
+        });
+    </script>
 
 </body>
 

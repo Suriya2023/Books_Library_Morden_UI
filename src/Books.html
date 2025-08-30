@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="../public/StyleSheet/style.css">
 </head>
 
@@ -27,13 +28,14 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarContent">
-                    <form class="d-flex mx-auto my-2 my-lg-0 w-50">
-                        <div id="rounded" class="search-box border d-flex align-items-center w-100 px-3">
-                            <input class="form-control no-border bg-transparent" type="search"
-                                placeholder="Search your books" />
-                            <i class="fa-solid fa-magnifying-glass text-muted"></i>
-                        </div>
-                    </form>
+                     <form class="d-flex mx-auto my-2 my-lg-0 w-50">
+                                        <div id="rounded"
+                                            class="search-box border d-flex align-items-center w-100 px-3">
+                                            <input id="searchInput" class="form-control no-border bg-transparent"
+                                                type="search" placeholder="Search your books" />
+                                            <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                                        </div>
+                                    </form>
 
                      <ul class="navbar-nav ms-auto align-items-center gap-3">
 
@@ -120,7 +122,9 @@
                 </li>
             </ul>
         </nav>
+  <div id="results" class="row mt-4"></div>
 
+                        
     </div>
 
 
@@ -187,6 +191,64 @@
             hd.style.display = "none";
 
         }
+    </script>
+      <script>
+        $(document).ready(function () {
+            let booksData = [];
+
+            // Load XML data
+            $.ajax({
+                type: "GET",
+                url: "data.xml",
+                dataType: "xml",
+                success: function (xml) {
+                    $(xml).find("book").each(function () {
+                        booksData.push({
+                            id: $(this).attr("id"),
+                            title: $(this).find("title").text(),
+                            author: $(this).find("author").text(),
+                            type: $(this).find("type").text(),
+                            details: $(this).find("details").text(),
+                            image: $(this).find("image").text()
+                        });
+                    });
+                }
+            });
+
+            $("#searchInput").on("keyup", function () {
+                let query = $(this).val().toLowerCase();
+                let output = "";
+
+                if (query.length > 0) {
+                    let filtered = booksData.filter(book =>
+                        book.title.toLowerCase().includes(query) ||
+                        book.author.toLowerCase().includes(query) ||
+                        book.type.toLowerCase().includes(query)
+                    );
+
+                    if (filtered.length > 0) {
+                        filtered.forEach(book => {
+                            output += `
+                      <div class="col-md-4 mb-3">
+                        <div class="card h-100 shadow-sm">
+                          <img src="${book.image}" class="card-img-top" alt="${book.title}">
+                          <div class="card-body">
+                            <h5 class="card-title">${book.title}</h5>
+                            <p class="card-text"><strong>Author:</strong> ${book.author}</p>
+                            <p class="card-text"><strong>Type:</strong> ${book.type}</p>
+                            <p class="text-muted">${book.details}</p>
+                          </div>
+                        </div>
+                      </div>`;
+                        });
+                    } else {
+                        output = "<p class='text-danger'>No results found</p>";
+                    }
+                }
+
+                $("#results").html(output);
+            });
+        });
     </script>
 </body>
 
