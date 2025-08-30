@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/StyleSheet/style.css">
+    <script src="../bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <title>About</title>
 </head>
 
@@ -28,24 +31,93 @@
                             <i class="fa-solid fa-magnifying-glass text-muted"></i>
                         </div>
                     </form>
+                    <ul class="navbar-nav ms-auto align-items-center gap-3">
 
-                <ul class="navbar-nav ms-auto align-items-center gap-3">
                         <li class="nav-item">
                             <a class="nav-link position-relative fw-medium" href="../src/book-details.html?id=4">
-                                New Release<sup class="text-warning fs-3 fw-bolder">.</sup>
+                                New Release
+                                <sup class="text-warning fs-3 fw-bolder">.</sup>
                                 <span class="badge-dot"></span>
                             </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link fw-medium" href="../public/index.html#bob">Featured</a>
+                            <a class="nav-link fw-medium" href="#bom">Featured</a>
                         </li>
+
+                        <li class="nav-item d-block d-lg-none">
+                            <a class="nav-link fw-medium" href="./about.html">About</a>
+                        </li>
+
+                        <li class="nav-item d-block d-lg-none">
+                            <a class="nav-link fw-medium" href="./Books.html">Books</a>
+                        </li>
+
+                        <li class="nav-item d-block d-lg-none">
+                            <a class="nav-link fw-medium" href="./book-details.html">Book
+                                Details</a>
+                        </li>
+
+                        <li class="nav-item d-block d-lg-none">
+                            <a class="nav-link fw-medium" href="./Contact.html">Contact</a>
+                        </li>
+
+                        <li class="nav-item d-block d-lg-none">
+                            <a class="nav-link fw-medium" href="./Analytics.html">Analytics</a>
+                        </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                            <a class="nav-link" href="./index.html"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                         </li>
+
                     </ul>
+
                 </div>
             </div>
         </nav>
+
+
+        <nav class="mobile-bottom-nav navbar fixed-bottom d-lg-none shadow-lg border-top bg-white">
+            <ul class="nav justify-content-around w-100 text-center fw-semibold">
+
+                <li class="nav-item flex-fill">
+                    <a href="./index.html" class="nav-link load-page active d-flex flex-column align-items-center py-2">
+                        <i class="bi bi-house-door-fill fs-5"></i>
+                        <small>Home</small>
+                    </a>
+                </li>
+
+                <li class="nav-item flex-fill">
+                    <a href="../src/Books.html" class="nav-link load-page d-flex flex-column align-items-center py-2">
+                        <i class="bi bi-book fs-5"></i>
+                        <small>Books</small>
+                    </a>
+                </li>
+
+                <li class="nav-item flex-fill">
+                    <a href="../src/book-details.html"
+                        class="nav-link d-flex flex-column load-page align-items-center py-2">
+                        <i class="bi bi-journal-text fs-5"></i>
+                        <small>Details</small>
+                    </a>
+                </li>
+
+                <li class="nav-item flex-fill">
+                    <a href="../src/Contact.html" class="nav-link load-page d-flex flex-column align-items-center py-2">
+                        <i class="bi bi-envelope fs-5"></i>
+                        <small>Contact</small>
+                    </a>
+                </li>
+
+                <li class="nav-item flex-fill">
+                    <a href="#" class="nav-link d-flex load-page flex-column align-items-center py-2">
+                        <i class="bi bi-gear fs-5"></i>
+                        <small>Settings</small>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
 
     </div>
 
